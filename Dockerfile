@@ -4,7 +4,7 @@ WORKDIR /SchoolApp/SchoolApi
 # Copy everything
 COPY . /SchoolApp/SchoolApi
 # Restore as distinct layers
-RUN dotnet restore
+RUN dotnet restore SchoolApp/SchoolApi/SchoolApi.csproj
 # Build and publish a release
 RUN dotnet publish -c Release -o out
 RUN dotnet publish -c release -o /SchoolApp/SchoolApi --no-restore
