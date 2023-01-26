@@ -12,4 +12,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
 WORKDIR /SchoolApp/SchoolApi
 COPY --from=build-env /SchoolApp/SchoolApi .
 EXPOSE 80
-ENTRYPOINT ["dotnet", "/SchoolApp/SchoolApi.dll"]
+ENTRYPOINT ["dotnet", "SchoolApi.dll"]
