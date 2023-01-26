@@ -7,7 +7,7 @@ COPY . /SchoolApp/SchoolApi
 RUN dotnet restore SchoolApp/SchoolApi/SchoolApi.csproj
 # Build and publish a release
 RUN dotnet publish -c Release -o out
-RUN dotnet publish -c release -o /SchoolApp/SchoolApi --no-restore
+RUN dotnet publish -c release -o SchoolApp/SchoolApi/SchoolApi.csproj --no-restore
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
 WORKDIR /SchoolApp/SchoolApi
