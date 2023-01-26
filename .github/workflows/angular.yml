@@ -30,7 +30,7 @@ jobs:
         node-version: '16'
 
     - name: Cache
-      run: npm cache clean
+      run: npm cache verify
 
     - name: Install dependencies
       run: npm install
