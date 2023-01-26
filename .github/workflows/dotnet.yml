@@ -32,6 +32,7 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+        
     - name: Restore dependencies
       run: dotnet restore SchoolApp/SchoolApi/SchoolApi.csproj
 
@@ -40,7 +41,6 @@ jobs:
 
     - name: Test
       run: dotnet test --no-build --verbosity normal SchoolApp/SchoolApi/SchoolApi.csproj
-      
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
