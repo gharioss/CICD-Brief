@@ -7,16 +7,16 @@ on:
   # Triggers the workflow on push or pull request events but only for the "prod" branch
   push:
     paths:
-      - 'SchoolApp/SchoolApi/'
-      - '!SchoolApp/SchoolFront/'
+      - '/SchoolApp/SchoolApi/'
+      - '!/SchoolApp/SchoolFront/'
     branches:
       - prod
       - test
       - develop
   pull_request:
     paths:
-      - 'SchoolApp/SchoolApi/'
-      - '!SchoolApp/SchoolFront/'
+      - '/SchoolApp/SchoolApi/'
+      - '!/SchoolApp/SchoolFront/'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
