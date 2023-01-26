@@ -5,7 +5,7 @@ using SchoolApi.Models;
 
 namespace SchoolApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CourseController : ControllerBase
     {
