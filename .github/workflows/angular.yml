@@ -33,10 +33,10 @@ jobs:
       run: npm cache verify
 
     - name: Install dependencies
-      run: npm install
+      run: npm install SchoolApp/SchoolFront
       
     - name: Build
-      run: npm run build:prod
+      run: npm run build SchoolApp/SchoolFront
 
     - name: Run tests
-      run: npm run test:headless
+      run: npm run test SchoolApp/SchoolFront
